@@ -222,7 +222,17 @@ Working on several sandboxes and a staging instance with two-factor auth?
   "webdav": "cert.staging.region.brand.demandware.net",
   "key": "./user.key",
   "cert": "./user.pem",
-  "ca": "./staging.cert"
+  "ca": "./staging.cert",
+  "watch": {
+    "ignored_dirs": [
+        "gulp_builder/temp-modcloth",
+        "dw.json"
+    ],
+    "gulp_exeptions": [
+        { "exeption": "/cartridge/scss/", "command": "gulp styles" },
+        { "exeption": "/cartridge/js/", "command": "gulp client-javascript" }
+    ]
+  }
 }
 ```
 #### Sandbox Instances
