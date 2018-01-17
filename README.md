@@ -228,9 +228,9 @@ Working on several sandboxes and a staging instance with two-factor auth?
         "gulp_builder/temp-modcloth",
         "dw.json"
     ],
-    "gulp_exeptions": [
-        { "exeption": "/cartridge/scss/", "command": "gulp styles" },
-        { "exeption": "/cartridge/js/", "command": "gulp client-javascript" }
+    "gulp_exceptions": [
+        { "exception": "/cartridge/scss/", "command": "gulp styles" },
+        { "exception": "/cartridge/js/", "command": "gulp client-javascript" }
     ]
   }
 }

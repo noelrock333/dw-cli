@@ -9,9 +9,7 @@ const { exec } = require('child_process');
 
 module.exports = options => {
   const {cartridges, codeVersion, webdav, request, silent = false, watch} = options;
-  const {ignored_dirs, gulp_exeptions} = watch;
-
-  const gulpExeptions = gulp_exeptions.map(item => item.exeption);
+  const {ignored_dirs, gulp_exceptions} = watch;
 
   try {
     log.info(`Pushing ${codeVersion} changes to ${webdav}`);
@@ -83,24 +81,24 @@ module.exports = options => {
       }
     };
 
-    function findExeption(path) {
-      return gulp_exeptions.find(item => {
-        return path.includes(item.exeption);
+    function findException(path) {
+      return gulp_exceptions.find(item => {
+        return path.includes(item.exception);
       });
     };
 
-    function checkExeptions(file, callback) {
-      let exeption = findExeption(file);
-      if (exeption) {
-        // Ejecutar comando para compilar assets
-        exec(`(cd gulp_builder && ${exeption.command})`, (error, stdout, stderr) => {});        
+    function checkExceptions(file, callback) {
+      let exception = findException(file);
+      if (exception) {
+        // Execute command to recompile assets
+        exec(`(cd gulp_builder && ${exception.command})`, (error, stdout, stderr) => {});        
       } else {
         callback(file);
       }
     }
 
-    watcher.on('change', (file) => checkExeptions(file, upload));
-    watcher.on('add', (file) => checkExeptions(file, upload));
+    watcher.on('change', (file) => checkExceptions(file, upload));
+    watcher.on('add', (file) => checkExceptions(file, upload));
   } catch (err) {
     log.error(err);
   }
