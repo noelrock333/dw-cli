@@ -1,0 +1,4 @@
+node_modules
+dw.json
+test/data/*
+npm-debug.log

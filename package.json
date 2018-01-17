@@ -1,0 +1,106 @@
+{
+  "_from": "dw-cli",
+  "_id": "dw-cli@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-BGhWIZT9cYbn0XxM+FGy9R8B7Ik=",
+  "_location": "/dw-cli",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "dw-cli",
+    "name": "dw-cli",
+    "escapedName": "dw-cli",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/dw-cli/-/dw-cli-1.0.3.tgz",
+  "_shasum": "0468562194fd7186e7d17c4cf851b2f51f01ec89",
+  "_spec": "dw-cli",
+  "_where": "/Users/noel/digital_center",
+  "author": "",
+  "ava": {
+    "files": [
+      "test/specs/*.js"
+    ]
+  },
+  "bin": {
+    "dw": "./lib/cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/mzwallace/dw-cli/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "archiver": "^1.3.0",
+    "axios": "^0.15.3",
+    "bluebird": "^3.5.0",
+    "chalk": "1.1.3",
+    "chokidar": "1.6.1",
+    "debug": "^2.6.1",
+    "lodash": "^4.17.4",
+    "node-notifier": "^5.0.2",
+    "ora": "^1.1.0",
+    "shelljs": "0.7.7",
+    "xml2js": "0.4.17",
+    "yargs": "^6.5.0"
+  },
+  "deprecated": false,
+  "description": "A command line utility for Salesforce Commerce Cloud (Demandware) SIG and PIG development.  The goal of this package is to make working with development on the Salesforce Commerce Cloud platform a more pleasant and intuitive experience. ``` Usage: dw <command> <instance> [options] --switches",
+  "devDependencies": {
+    "@types/archiver": "^0.15.37",
+    "@types/chalk": "^0.4.31",
+    "@types/chokidar": "^1.4.31",
+    "@types/debug": "^0.0.29",
+    "@types/lodash": "^4.14.55",
+    "@types/node-notifier": "^0.0.28",
+    "@types/ora": "^0.3.31",
+    "@types/xml2js": "^0.0.33",
+    "@types/yargs": "^6.6.0",
+    "ava": "^0.18.2",
+    "babel-eslint": "^7.2.0",
+    "eslint": "^3.18.0",
+    "eslint-config-xo": "^0.18.1",
+    "eslint-plugin-babel": "^4.1.1",
+    "husky": "^0.13.2",
+    "xo": "^0.18.0"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "homepage": "https://github.com/mzwallace/dw-cli#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "./lib/cli.js",
+  "name": "dw-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzwallace/dw-cli.git"
+  },
+  "scripts": {
+    "postmerge": "bash bin/post-merge",
+    "precommit": "xo",
+    "prepush": "xo",
+    "test": "xo && ava"
+  },
+  "version": "1.0.3",
+  "xo": {
+    "space": true,
+    "esnext": true,
+    "ignores": [
+      "test/**"
+    ],
+    "rules": {
+      "no-use-extend-native/no-use-extend-native": 0,
+      "unicorn/no-process-exit": 0,
+      "import/no-dynamic-require": 0,
+      "no-unused-expressions": 0,
+      "capitalized-comments": 0
+    }
+  }
+}
