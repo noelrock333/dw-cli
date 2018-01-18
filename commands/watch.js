@@ -9,7 +9,9 @@ const { exec } = require('child_process');
 
 module.exports = options => {
   const {cartridges, codeVersion, webdav, request, silent = false, watch} = options;
-  const {ignored_dirs, gulp_exceptions} = watch;
+  let {ignored_dirs, gulp_exceptions} = watch;
+  ignored_dirs = Array.isArray(ignored_dirs) ? ignored_dirs : [];
+  gulp_exceptions = Array.isArray(gulp_exceptions) ? gulp_exceptions : [];
 
   try {
     log.info(`Pushing ${codeVersion} changes to ${webdav}`);

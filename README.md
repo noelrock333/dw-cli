@@ -163,7 +163,7 @@ warn [2017-01-13 11:56:01.467 GMT] WARN JobThread|14022147|Export Analytics Conf
 ## Installation
 #### Install via NPM
 ```
-user@computer:~/Sites/site$ npm install -g dw-cli
+user@computer:~/Sites/site$ npm install -g git+ssh://git@github.com:NoelRock333/dw-cli.git
 ```
 #### The way config works
 Place a dw.json file in your project root directory or use `dw init`.
@@ -181,6 +181,7 @@ Working on a single sandbox and your cartidges are in a 'cartridges' folder in t
   "apiVersion": 'v16_6',
   "clientId": "client-id-from-account-dashboard",
   "clientPassword": "client-password-from-account-dashboard",
+  "watch": {}
 }
 ```
 #### Another Example
@@ -207,6 +208,7 @@ Working on several sandboxes and a staging instance with two-factor auth?
       "ca": "./staging.cert"
     }
   }
+  "watch": {}
 }
 ```
 #### All Possible Config Options
